@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svoz odpadu 2026</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #222;
+        }
+
+        /* Styl tlačítka měsíce */
+        .accordion {
+            background-color: #fff;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: 0.4s;
+            border-bottom: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .accordion:after {
+            content: '\002B'; /* Plus znak */
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            font-size: 20px;
+        }
+
+        .active, .accordion:hover {
+            background-color: #e8f0fe;
+        }
+
+        .active:after {
+            content: "\2212"; /* Mínus znak */
+        }
+
+        /* Styl obsahu po rozbalení */
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 0 0 8px 8px;
+            margin-top: -8px;
+            margin-bottom: 8px;
+        }
+
+        /* Jednotlivé řádky svozu */
+        .event-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .event-row:last-child {
+            border-bottom: none;
+        }
+
+        .date {
+            font-weight: bold;
+            width: 70px;
+            font-size: 16px;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* Barvy */
+        .sko { background-color: #333; color: white; }
+        .bio { background-color: #8B4513; color: white; }
+        .pap { background-color: #2196F3; color: white; }
+        .pla { background-color: #FFEB3B; color: #333; }
+        .neb { background-color: #F44336; color: white; }
+
+        .hint {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🚛 Svoz odpadu 2026</h1>
+
+    <!-- LEDEN -->
+    <button class="accordion">Leden</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">1.1.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">8.1.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">14.1.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">19.1.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">22.1.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- ÚNOR -->
+    <button class="accordion">Únor</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">5.2.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">11.2.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">12.2.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">16.2.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">19.2.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- BŘEZEN -->
+    <button class="accordion">Březen</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">5.3.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">11.3.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">12.3.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">16.3.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">19.3.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- DUBEN -->
+    <button class="accordion">Duben</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">2.4.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">8.4.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">9.4.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">16.4.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">20.4.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">23.4.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">30.4.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- KVĚTEN -->
+    <button class="accordion">Květen</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">7.5.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">13.5.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">14.5.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">18.5.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">21.5.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">23.5.</span> <span class="badge neb">NEBEZPEČNÝ ODPAD</span></div>
+        <div class="event-row"><span class="date">28.5.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- ČERVEN -->
+    <button class="accordion">Červen</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">4.6.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">10.6.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">11.6.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">15.6.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">18.6.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">25.6.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- ČERVENEC -->
+    <button class="accordion">Červenec</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">2.7.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">8.7.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">9.7.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">16.7.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">20.7.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">23.7.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">30.7.</span> <span class="badge bio">BIO odpad</span></div>
+    </div>
+
+    <!-- SRPEN -->
+    <button class="accordion">Srpen</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">6.8.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">12.8.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">13.8.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">17.8.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">20.8.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">27.8.</span> <span class="badge bio">BIO odpad</span></div>
+    </div>
+
+    <!-- ZÁŘÍ -->
+    <button class="accordion">Září</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">3.9.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">9.9.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">10.9.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">17.9.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">21.9.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">24.9.</span> <span class="badge bio">BIO odpad</span></div>
+    </div>
+
+    <!-- ŘÍJEN -->
+    <button class="accordion">Říjen</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">1.10.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">8.10.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">14.10.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">15.10.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">17.10.</span> <span class="badge neb">NEBEZPEČNÝ ODPAD</span></div>
+        <div class="event-row"><span class="date">19.10.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">22.10.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">29.10.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- LISTOPAD -->
+    <button class="accordion">Listopad</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">5.11.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">11.11.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">12.11.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">16.11.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">19.11.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">26.11.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <!-- PROSINEC -->
+    <button class="accordion">Prosinec</button>
+    <div class="panel">
+        <div class="event-row"><span class="date">3.12.</span> <span class="badge bio">BIO odpad</span></div>
+        <div class="event-row"><span class="date">9.12.</span> <span class="badge pap">Papír</span></div>
+        <div class="event-row"><span class="date">10.12.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+        <div class="event-row"><span class="date">21.12.</span> <span class="badge pla">Plast</span></div>
+        <div class="event-row"><span class="date">24.12.</span> <span class="badge sko">Popelnice (SKO)</span></div>
+    </div>
+
+    <div class="hint">Klikněte na název měsíce pro zobrazení termínů</div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
